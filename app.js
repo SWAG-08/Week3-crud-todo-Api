@@ -127,5 +127,5 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Server error!' });
 });
 
-const PORT = 3002;
+const PORT = process.env.PORT || 3002;
 app.listen(PORT, '0.0.0.0', () => console.log(`Server on port ${PORT}`));
